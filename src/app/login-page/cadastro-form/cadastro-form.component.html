@@ -1,0 +1,60 @@
+<div class="login-form">
+  <div class="top-form">
+    <div class="title">TRILHA</div>
+    <div class="forms">
+      <div>Criar cadastro</div>
+      <mat-form-field appearance="fill">
+        <mat-label>Nome de usuário</mat-label>
+        <input matInput placeholder="Escolha seu usuário...">
+        <mat-hint align="end">Campo obrigatório*</mat-hint>
+        <!-- <mat-error *ngIf="cadastroForm.controls['user'].hasError('required')">
+          Por favor, digite seu nome de usuário
+        </mat-error> -->
+        <!-- <mat-error *ngIf="cadastroForm.controls['user'].hasError('email')">
+          Seu usuário deve ser um e-mail
+        </mat-error> -->
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Digite seu email...">
+        <mat-hint align="end">Campo obrigatório*</mat-hint>
+        <!-- <mat-error *ngIf="cadastroForm.controls['user'].hasError('required')">
+          Por favor, digite seu nome de usuário
+        </mat-error> -->
+        <!-- <mat-error *ngIf="cadastroForm.controls['user'].hasError('email')">
+          Seu usuário deve ser um e-mail
+        </mat-error> -->
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input matInput placeholder="Digite sua senha...">
+        <mat-hint align="end">Campo obrigatório*</mat-hint>
+        <!-- <mat-error *ngIf="cadastroForm.controls['user'].hasError('required')">
+          Por favor, digite seu nome de usuário
+        </mat-error> -->
+        <!-- <mat-error *ngIf="cadastroForm.controls['user'].hasError('email')">
+          Seu usuário deve ser um e-mail
+        </mat-error> -->
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Repita a senha</mat-label>
+        <input matInput>
+        <mat-hint align="end">Campo obrigatório*</mat-hint>
+        <!-- <mat-error *ngIf="cadastroForm.controls['user'].hasError('required')">
+          Por favor, digite seu nome de usuário
+        </mat-error> -->
+        <!-- <mat-error *ngIf="cadastroForm.controls['user'].hasError('email')">
+          Seu usuário deve ser um e-mail
+        </mat-error> -->
+      </mat-form-field>
+      <div class="bottom-form">
+        <button class="butao" mat-button [routerLink]="['/login']" routerLinkActive="router-link-active">Já possui conta?</button>
+        <button class="butao" mat-raised-button>Criar conta</button>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</div>

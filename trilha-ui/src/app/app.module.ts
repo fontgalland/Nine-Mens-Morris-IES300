@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,8 +17,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MaterialModule } from './material.module';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LojaComponent } from './menu-principal/loja/loja.component';
+import { EstatisticaComponent } from './menu-principal/estatistica/estatistica.component';
+import { PersonalizarComponent } from './menu-principal/personalizar/personalizar.component';
+import { JogoComponent } from './menu-principal/jogo/jogo.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,12 @@ import { MenuPrincipalComponent } from './menu-principal/menu-principal.componen
     LoginPageComponent,
     LoginFormComponent,
     CadastroFormComponent,
-    MenuPrincipalComponent
+    MenuPrincipalComponent,
+    LojaComponent,
+    EstatisticaComponent,
+    PersonalizarComponent,
+    JogoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -37,9 +48,13 @@ import { MenuPrincipalComponent } from './menu-principal/menu-principal.componen
     MatRadioModule,
     MatCardModule,
     MatIconModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+  ],
+  providers: [
 
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

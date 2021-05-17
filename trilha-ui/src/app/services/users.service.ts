@@ -10,6 +10,7 @@ export class UsersService {
 
   url = environment.apiURL
   // v1 = environment.version
+  cors = 'https://cors-anywhere.herokuapp.com/'
   token = localStorage.getItem('token');
   headers = new HttpHeaders({
     'Content-Type': 'application/json',
@@ -21,13 +22,12 @@ export class UsersService {
   signupUsuario(user): Observable<any> {
 
     let credential = {
-      email: user.value.user,
-      firstName: user.value.nome,
-      lastName: user.value.sobreNome,
+      username: user.value.user,
       password: user.value.password,
+      email: user.value.email,
     }
 
-    return this.http.post<any>(this.url + '/users/signup', credential)
+    return this.http.post<any>(this.cors + this.url + '/cadastro', credential)
 
   }
 

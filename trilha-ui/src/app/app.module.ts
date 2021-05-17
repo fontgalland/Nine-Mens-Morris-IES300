@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SafeUrlPipe } from './safe-url.pipe';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -35,7 +37,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     EstatisticaComponent,
     PersonalizarComponent,
     JogoComponent,
-    NavbarComponent
+    NavbarComponent,
+    SafeUrlPipe
   ],
   imports: [
     BrowserModule,
